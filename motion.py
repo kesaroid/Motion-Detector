@@ -36,7 +36,7 @@ while True:
 
     # Contouring of the image is necessary to smoothen the image (from CV2 documentation). It uses a
     # copy of the threshold frame and approximation is done
-    (_, cnts, _) = cv2.findContours(thershold_frame.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    (cnts, _) = cv2.findContours(thershold_frame.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     # filtering out the contours that are greater than 1000
     for contour in cnts:
